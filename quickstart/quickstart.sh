@@ -27,7 +27,7 @@ export CONSOLR_URI=http://localhost:9088
 jar xf saturn-executor-2.x-SNAPSHOT-zip.zip
 
 cp -r ${BASEDIR}/quickstart/demo-java-job.jar $BASEDIR/saturn-executor/target/saturn-executor-2.x-SNAPSHOT/lib
-nohup java -Xms256m -Xmx256m -Xss256K -Dfile.encoding=UTF-8 -Dsaturn.stdout=true -Dstart.check.outfile=status -DVIP_SATURN_CONSOLE_URI=${CONSOLR_URI} -jar saturn-executor-2.x-SNAPSHOT.jar  -namespace mydomain -executorName executor-1 -saturnLibDir ./saturn-executor-2.x-SNAPSHOT -appLibDir ./saturn-executor-2.x-SNAPSHOT/lib > ./saturn-executor.log 2>&1 &
+nohup java -Xms256m -Xmx256m -Dfile.encoding=UTF-8 -Dsaturn.stdout=true -Dstart.check.outfile=status -DVIP_SATURN_CONSOLE_URI=${CONSOLR_URI} -jar saturn-executor-2.x-SNAPSHOT.jar  -namespace mydomain -executorName executor-1 -saturnLibDir ./saturn-executor-2.x-SNAPSHOT -appLibDir ./saturn-executor-2.x-SNAPSHOT/lib > ./saturn-executor.log 2>&1 &
 sleep 10
 
 echo "[Step 4] Add a demo java job by code"

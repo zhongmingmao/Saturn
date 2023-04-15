@@ -44,7 +44,7 @@ public class SaturnExecutorExtensionDefault extends SaturnExecutorExtension {
 	}
 
 	private static String getDefaultLogDir(String executorName) {
-		return "/apps/logs/saturn/" + System.getProperty("namespace") + "/" + executorName + "-"
+		return "/opt/saturn/logs/saturn/" + System.getProperty("namespace") + "/" + executorName + "-"
 				+ LocalHostService.cachedIpAddress;
 	}
 

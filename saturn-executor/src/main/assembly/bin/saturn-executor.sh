@@ -82,7 +82,7 @@ else
 fi
 
 if [[ "$LOGDIR" = "" ]]; then
-  LOGDIR=/apps/logs/saturn/${NAMESPACE}/${EXECUTORNAME}-${LOCALIP}
+  LOGDIR=/opt/saturn/logs/saturn/${NAMESPACE}/${EXECUTORNAME}-${LOCALIP}
 fi
 
 OUTFILE=$LOGDIR/saturn-executor.log
